@@ -1,4 +1,171 @@
-.h1 {
-  background-color: blue;
-  color: beige;
+.sliderPage {
+  margin-top: -55%;
+  animation: sliderpage 3s ease-out forwards;
+}
+@keyframes sliderpage {
+  from {
+    opacity: 0;
+    transform: translateY(100rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.sliderPageHeading {
+  position: relative;
+  /* margin-top: 10%; */
+  font-size: 60px;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.description {
+  margin-top: 20%;
+  position: relative;
+  height: -20vh;
+  font-size: large;
+  text-align: center;
+  margin: 0 10%;
+  animation-duration: 5s;
+  animation-name: page;
+}
+@keyframes page {
+  0% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.left {
+  margin-left: 10px;
+  margin-top: 20px;
+  animation-duration: 8s;
+  animation-name: left;
+}
+@keyframes left {
+  0% {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.left img {
+  animation-delay: 10s;
+  animation-duration: 2s;
+  animation-name: leftImg;
+  animation-iteration-count: infinite;
+}
+
+.right {
+  margin-left: 10px;
+  margin-top: 20px;
+  animation-duration: 8s;
+  animation-name: right;
+}
+@keyframes right {
+  0% {
+    opacity: 0;
+    transform: translateX(130%);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.right img {
+  animation-delay: 8s;
+  animation-duration: 2s;
+  animation-name: rightImg;
+  animation-iteration-count: infinite;
+}
+@keyframes rightImg {
+  0% {
+    opacity: 1;
+    transform: translateX(70%);
+    width: 100%;
+  }
+
+  70% {
+    opacity: 1;
+    width: 50%;
+    transform: translateX(20%);
+  }
+  100% {
+    opacity: 0;
+    width: 0%;
+  }
+}
+@keyframes leftImg {
+  0% {
+    opacity: 1;
+    transform: translateX(70%);
+    width: 450px;
+    height: 250px;
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateX(0%);
+    width: 650px;
+    height: 450px;
+  }
+  100% {
+    opacity: 0;
+    width: 0%;
+  }
+}
+.imageSlider {
+  display: flex;
+}
+.button {
+  position: relative;
+  margin-left: 50%;
+  margin-top: 10%;
+  color: rgb(104, 84, 10);
+  font-size: 20px;
+  font-weight: bold;
+  animation-duration: 8s;
+  animation-name: rightButton;
+}
+@keyframes rightButton {
+  0% {
+    opacity: 0;
+    transform: translateX(130%);
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.button button {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgb(104, 84, 10);
+  background-color: rgb(165, 146, 74);
+  border-radius: 55%;
 }
