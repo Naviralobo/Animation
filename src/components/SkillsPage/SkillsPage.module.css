@@ -43,11 +43,14 @@
 .second {
   animation: image 6s 5;
   position: fixed;
-  top: 15%;
+  top: 20%;
   left: 5%;
 }
 .first {
   animation: image 6s 5 alternate;
+  position: fixed;
+  top: 20%;
+  left: 5%;
 }
 
 @keyframes image {

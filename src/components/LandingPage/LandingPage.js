@@ -1,12 +1,17 @@
 import classes from "./LandingPage.module.css";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import SliderImage from "../SliderImage/SliderImage";
 
 const LandingPage = () => {
+  const history = useHistory();
   const [turned, setIsTurned] = useState(false);
 
   const turnPageHandler = () => {
     setIsTurned(true);
+  };
+  const enquireButtonHandler = () => {
+    history.push("./enquire");
   };
   return (
     <div className={classes.container}>
@@ -18,7 +23,9 @@ const LandingPage = () => {
           <div>INVEST</div>
           <div>HOUSING</div>
         </div>
-        <button className={classes.enquire}>ENQUIRE</button>
+        <button className={classes.enquire} onClick={enquireButtonHandler}>
+          ENQUIRE
+        </button>
         <div className={classes.body}>
           <div className={classes.left}>
             <img

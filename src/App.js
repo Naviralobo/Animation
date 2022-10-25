@@ -4,8 +4,11 @@ import Enquire from "./components/Enquire/Enquire";
 function App() {
   return (
     <>
-      <LandingPage />
-      <Route path="./enquire">
+      <Route path="/" exact>
+        <LandingPage />
+      </Route>
+
+      <Route path="/enquire">
         <Enquire />
       </Route>
     </>
