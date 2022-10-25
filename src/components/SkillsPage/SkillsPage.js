@@ -26,12 +26,14 @@ const SkillsPage = () => {
             width={450}
             height={450}
             src={allImages[selectedImage - 1]}
+            alt=""
           />
           <img
             className={classes.second}
             width={450}
             height={450}
             src={allImages[selectedImage]}
+            alt=""
           />
         </div>
         <div className={classes.right}>

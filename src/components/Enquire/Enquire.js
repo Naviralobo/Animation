@@ -1,10 +1,8 @@
 import { useRef } from "react";
 import classes from "./Enquire.module.css";
-import { useHistory } from "react-router-dom";
 import axios from "axios";
 
 const Enquire = () => {
-  const history = useHistory();
   const nameInputRef = useRef();
   const enquiryInputRef = useRef();
 

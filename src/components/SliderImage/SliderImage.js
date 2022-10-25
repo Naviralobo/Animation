@@ -37,13 +37,13 @@ const SliderImage = () => {
             takes care of itself. Here is a glimpse of what's it's like to be a
             member of Prime Lifespace Team
           </div>
-          <div className={classes.imageSlider}>
+          <div className={classes.imageSlider} onClick={turnPageHandler}>
             <div className={classes.left}>
               <img
                 width={650}
                 height={450}
                 src={allImages[selectedImage]}
-                onClick={turnPageHandler}
+                alt=""
               />
             </div>
             <div className={classes.right}>
@@ -51,6 +51,7 @@ const SliderImage = () => {
                 width={450}
                 height={350}
                 src={allImages[(selectedImage + 1) % 6]}
+                alt=""
               />
             </div>
             <div classNamee={classes.buttonFixed}>
