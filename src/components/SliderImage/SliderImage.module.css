@@ -1,4 +1,5 @@
 .sliderPage {
+  position: relative;
   margin-top: -55%;
   animation: sliderpage 3s ease-out forwards;
 }
@@ -44,7 +45,8 @@
     opacity: 1;
   }
 }
-.left {
+.left img {
+  /* overflow: hidden; */
   margin-left: 10px;
   margin-top: 20px;
   animation-duration: 8s;
@@ -65,18 +67,11 @@
     transform: translateX(0);
   }
 }
-
-.left img {
-  animation-delay: 10s;
-  animation-duration: 2s;
-  animation-name: leftImg;
-  animation-iteration-count: infinite;
-}
-
-.right {
+.right img {
+  /* overflow: hidden; */
   margin-left: 10px;
   margin-top: 20px;
-  animation-duration: 8s;
+  animation-duration: 10s;
   animation-name: right;
 }
 @keyframes right {
@@ -92,55 +87,45 @@
     transform: translateX(0);
   }
 }
-.right img {
-  animation-delay: 8s;
+.left {
+  animation-delay: 10s;
+  /* overflow: hidden; */
   animation-duration: 2s;
-  animation-name: rightImg;
+  animation-name: leftImg;
   animation-iteration-count: infinite;
-}
-@keyframes rightImg {
-  0% {
-    opacity: 1;
-    transform: translateX(70%);
-    width: 100%;
-  }
-
-  70% {
-    opacity: 1;
-    width: 50%;
-    transform: translateX(20%);
-  }
-  100% {
-    opacity: 0;
-    width: 0%;
-  }
 }
 @keyframes leftImg {
   0% {
     opacity: 1;
-    transform: translateX(70%);
-    width: 450px;
-    height: 250px;
+    transform: translateX(100%);
   }
 
-  70% {
-    opacity: 1;
-    transform: translateX(0%);
-    width: 650px;
-    height: 450px;
-  }
   100% {
-    opacity: 0;
-    width: 0%;
+    opacity: 1;
   }
 }
+
+.right {
+  animation-delay: 6s;
+  overflow: hidden;
+  animation-duration: 2s;
+  animation-name: rightImg;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
 .imageSlider {
   display: flex;
+  overflow: hidden;
+}
+.buttonFixed {
+  position: fixed;
 }
 .button {
   position: relative;
-  margin-left: 50%;
-  margin-top: 10%;
+  display: flex;
+  margin-left: -180%;
+  margin-top: 300%;
   color: rgb(104, 84, 10);
   font-size: 20px;
   font-weight: bold;

@@ -27,29 +27,33 @@ const SliderImage = () => {
 
   return (
     <>
-      <div className={classes.sliderPage}>
-        <div className={classes.sliderPageHeading}>LIFE AT PRIME LIFESPACE</div>
-        <div className={classes.description}>
-          We believe when everyone is moving forward together then success takes
-          care of itself. Here is a glimpse of what's it's like to be a member
-          of Prime Lifespace Team
-        </div>
-        <div className={classes.imageSlider}>
-          <div className={classes.left}>
-            <img
-              width={650}
-              height={450}
-              src={allImages[selectedImage]}
-              onClick={turnPageHandler}
-            />
+      {!turned && (
+        <div className={classes.sliderPage}>
+          <div className={classes.sliderPageHeading}>
+            LIFE AT PRIME LIFESPACE
           </div>
-          <div className={classes.right}>
-            <img
-              width={450}
-              height={350}
-              src={allImages[(selectedImage + 1) % 6]}
-            />
-            <div>
+          <div className={classes.description}>
+            We believe when everyone is moving forward together then success
+            takes care of itself. Here is a glimpse of what's it's like to be a
+            member of Prime Lifespace Team
+          </div>
+          <div className={classes.imageSlider}>
+            <div className={classes.left}>
+              <img
+                width={650}
+                height={450}
+                src={allImages[selectedImage]}
+                onClick={turnPageHandler}
+              />
+            </div>
+            <div className={classes.right}>
+              <img
+                width={450}
+                height={350}
+                src={allImages[(selectedImage + 1) % 6]}
+              />
+            </div>
+            <div classNamee={classes.buttonFixed}>
               <div className={classes.button}>
                 <button>P</button>
                 <span> 0{selectedImage + 1}</span>
@@ -60,7 +64,7 @@ const SliderImage = () => {
             </div>
           </div>
         </div>
-      </div>
+      )}
       {turned && (
         <div>
           <SkillsPage />
