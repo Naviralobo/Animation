@@ -49,7 +49,7 @@
   /* overflow: hidden; */
   margin-left: 10px;
   margin-top: 20px;
-  animation-duration: 8s;
+  animation-duration: 12s;
   animation-name: left;
 }
 @keyframes left {
@@ -96,22 +96,43 @@
 }
 @keyframes leftImg {
   0% {
-    opacity: 1;
-    transform: translateX(100%);
+    transform: translateX(34rem);
   }
-
+  50% {
+    transform: translateX(0rem);
+  }
+  99% {
+    transform: translateX(0rem);
+  }
   100% {
-    opacity: 1;
+    transform: translateX(-40rem);
   }
 }
 
 .right {
   animation-delay: 6s;
-  overflow: hidden;
   animation-duration: 2s;
   animation-name: rightImg;
   animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+  /* animation-timing-function: ease-in-out; */
+}
+@keyframes rightImg {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.3;
+    /* transform: translateX(0rem); */
+  }
 }
 
 .imageSlider {

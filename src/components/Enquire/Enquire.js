@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import classes from "./Enquire.module.css";
 import { useHistory } from "react-router-dom";
+import axios from "axios";
 
 const Enquire = () => {
   const history = useHistory();
@@ -12,10 +13,15 @@ const Enquire = () => {
     const enteredName = nameInputRef.current.value;
     const enteredEnquiry = enquiryInputRef.current.value;
     const obj = { name: enteredName, enquiry: enteredEnquiry };
-    console.log(obj);
-  };
-  const backToMainPageHandler = () => {
-    history.replace("/");
+    axios.post
+      .post(
+        `https://expensetracker-50239-default-rtdb.firebaseio.com/enquiry/.json`,
+        obj
+      )
+      .then((res) => {
+        console.log(res.data.name);
+      })
+      .catch((err) => alert(err));
   };
   return (
     <div className={classes.div}>
@@ -40,9 +46,6 @@ const Enquire = () => {
             </div>
           </form>
         </section>
-        <div className={classes.actions}>
-          <button onCLick={backToMainPageHandler}>Back</button>
-        </div>
       </div>
     </div>
   );

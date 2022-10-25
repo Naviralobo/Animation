@@ -26,7 +26,7 @@
 }
 .left {
   width: 50%;
-  margin-top: 30px;
+  margin-top: 2%;
   animation-name: left;
   animation-delay: 3s;
   animation-duration: 4s;
@@ -43,13 +43,11 @@
 .second {
   animation: image 6s 5;
   position: fixed;
-  top: 20%;
   left: 5%;
 }
 .first {
   animation: image 6s 5 alternate;
   position: fixed;
-  top: 20%;
   left: 5%;
 }
 
